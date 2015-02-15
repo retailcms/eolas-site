@@ -1,0 +1,11 @@
+{
+  "name": "search2",
+  "version": "1.0.0",
+  "description": "Indexes content.xml files for Lunr search",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "J Carmichael",
+  "license": "Commercial"
+}

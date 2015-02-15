@@ -1,0 +1,32 @@
+$max-width: 60rem;
+$bigger-max-width: 70rem;
+$half-width: ($max-width - 1.5) / 2;
+$bigger-half-width: ($bigger-max-width - 1.5) / 2;
+$full-width: 64rem;
+$bigger-full-width: 74rem;
+$one-third-width: 21rem;
+$two-third-width: 37.5rem;
+@import 'normalize';
+@import 'mixins';
+@import 'colors';
+@import 'typography';
+@import 'ui';
+// @import 'modal';
+// @import 'svg';
+// @import 'search';
+* {
+  box-sizing: border-box;
+}
+input:focus, select:focus, textarea:focus, button:focus {
+  outline: none;
+}
+.container {
+  width: 29rem;
+  margin: 0 auto;
+}
+header {
+  text-align: center;
+  p {
+    text-align: left;
+  }
+}

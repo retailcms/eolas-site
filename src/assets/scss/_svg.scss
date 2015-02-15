@@ -1,0 +1,187 @@
+//svg styles
+svg {
+  .transparent-fill {
+    fill: rgba(0, 0, 0, 0);
+  }
+  .green-fill {
+    fill: #75A635;
+  }
+  .grey-fill {
+    fill: #F8F8F8;
+  }
+  .orange-fill {
+    fill: $light-orange;
+  }
+  .blue-fill {
+    fill: $light-blue;
+  }
+  .white-fill {
+    fill: #fff;
+  }
+  .grey-stroke {
+    stroke: #F8F8F8;
+    stroke-width: 2;
+  }
+  .black-stroke {
+    fill: none;
+    stroke: #4d4d4d;
+  }
+  .blue-line {
+    fill: none;
+    stroke: #e1a139;
+    stroke-width: 2;
+  }
+  .orange-line {
+    fill: none;
+    stroke: #1a2a50;
+    stroke-width: 2;
+  }
+  .dark-grey-stroke {
+    stroke: $dark-grey;
+  }
+  .dark-grey-fill {
+    fill: $dark-grey;
+  }
+  .dashed-line {
+    fill: none;
+    opacity: 0.5;
+    stroke: #4d4d4d;
+    stroke-width: 1;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 12;
+  }
+  .grey-line {
+    fill: none;
+    stroke: #F8F8F8;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+  }
+  .rounded-line {
+    fill: none;
+    stroke: $dark-grey;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+  }
+  .button {
+    cursor: pointer;
+    fill: #b3b3b3;
+    text {
+      fill: #fff;
+    }
+    tspan {
+      fill: #fff;
+    }
+    &.active, &:hover {
+      rect {
+        fill: $light-blue;
+      }
+    }
+    &:active {
+      rect {
+        fill: $dark-grey;
+      }
+    }
+    text {
+      font-family: $bold-font;
+      fill: #ffffff;
+    }
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .h1 {
+    fill: #f2f2f2;
+  }
+  text {
+    font-family: $regular-font;
+    font-size: $base-font-size;
+    fill: $dark-grey;
+    @media screen and (max-height: 48em), screen and (max-width: 50em) {
+      //font-size: $base-font-size * 1.5;
+    }
+  }
+}
+// For handling text boxes in SVG items
+.reveal {
+  display: none;
+}
+#textContainer {
+  color: #ffffff;
+  position: absolute;
+  top: 75%;
+  left: 5%;
+  width: 45%;
+  height: 22%;
+  p {
+    margin: 0;
+    line-height: 1.5em;
+  }
+  &.content-1-1-1 {
+    top: 73%;
+    left: 56%;
+    width: 37%;
+    height: 19%;
+    color:$dark-grey;
+  }
+}
+@media screen and (orientation: portrait) {
+  .svg-container {
+    width: 100%;
+    height: 0!important;
+    position: relative;
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+// @media screen and (orientation: landscape) and (max-height: 768px), screen and (orientation: landscape) and (max-width: 1024px)  {
+//   .svg-container {
+//     width: auto;
+//     padding-top: 0!important;
+//     position: relative;
+//     svg {
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//       height: 100%;
+//       width: 100%;
+//     }
+//   }
+// }
+@media screen and (orientation: landscape) {
+  .svg-container {
+    width: auto;
+    padding-top: 0!important;
+    height: auto;
+    position: relative;
+    @media screen and (max-height: 37.5em), screen and (max-width: 50em) {
+      height: 100vh!important;
+      width: 100vw!important;
+    }
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+@media screen and (orientation: landscape) and (min-height: 832px) and (min-width: 1025px) {
+  .svg-container {
+    width: 100%;
+    height: 0!important;
+    position: relative;
+    //padding-top: 68%!important;
+    // New height
+    padding-top: 75%!important;
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
