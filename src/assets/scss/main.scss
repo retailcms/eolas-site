@@ -20,13 +20,82 @@ $two-third-width: 37.5rem;
 input:focus, select:focus, textarea:focus, button:focus {
   outline: none;
 }
+img {
+  width: 100%;
+}
 .container {
-  width: 29rem;
+  max-width: 29rem;
+  width: 80%;
+  position: relative;
   margin: 0 auto;
+}
+body {
+  background: url(../images/bg.png);
 }
 header {
   text-align: center;
-  p {
-    text-align: left;
+  padding: 0 0 10rem 0;
+  min-height: 100vh;
+  .container {
+    h1 {
+      text-indent: -10000px;
+      background: url(../images/eolas.png); // png fallback for non-svg browsers
+      background: url(../images/eolas.svg);
+      background-repeat: no-repeat;
+      height: 11rem;
+      width: 100%;
+      text-align: center;
+    }
+    h2 {
+      text-transform: uppercase;
+      font-family: $light-font;
+      font-weight: 100;
+      margin: 0;
+      line-height: 0;
+    }
+    h3 {
+      margin: 2rem 0;
+    }
+    p {
+      text-align: left;
+    }
+  }
+}
+ol {
+  list-style-type: none;
+  section {
+    padding: 5rem 0 5rem 0;
+    min-height: 100vh;
+    h1 {
+      text-transform: uppercase;
+    }
+    h2 {
+      line-height: 2rem;
+    }
+  }
+  .number {
+    width: 4rem;
+    height: 4rem;
+    display: inline-block;
+    position: absolute;
+    left: -5rem;
+    top: 0.6rem;
+    svg {
+      .num1 {
+        fill: #FDEA14;
+      }
+      .num2 {
+        fill: #75b72c;
+      }
+      .num3 {
+        fill: #0992d1;
+      }
+      .white-fill {
+        fill: #FFFFFF;
+      }
+      .bold-font {
+        font-size: 40px;
+      }
+    }
   }
 }

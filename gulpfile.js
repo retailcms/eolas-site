@@ -114,8 +114,8 @@ gulp.task('js', function() {
     .pipe(gulp.dest(destPath + '/plugins/'));
 
   // Move to 'content' folder
-  gulp.src(['src/player/**/*.js'])
-    .pipe(gulp.dest(destPath + '/player/'));
+  //gulp.src(['src/player/**/*.js'])
+    //.pipe(gulp.dest(destPath + '/player/'));
 
 });
 
