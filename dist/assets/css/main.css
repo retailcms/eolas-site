@@ -430,12 +430,13 @@ img {
   margin: 0 auto; }
 
 body {
-  background: url(../images/bg.png); }
+  background: url(../images/bg.jpg); }
 
 header {
   text-align: center;
   padding: 0 0 10rem 0;
-  min-height: 100vh; }
+  min-height: 100vh;
+  overflow: hidden; }
   header .container h1 {
     text-indent: -10000px;
     background: url(../images/eolas.png);
@@ -458,6 +459,7 @@ header {
 ol {
   list-style-type: none; }
   ol section {
+    overflow: hidden;
     padding: 5rem 0 5rem 0;
     min-height: 100vh; }
     ol section h1 {

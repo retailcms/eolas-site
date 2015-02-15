@@ -30,12 +30,13 @@ img {
   margin: 0 auto;
 }
 body {
-  background: url(../images/bg.png);
+  background: url(../images/bg.jpg);
 }
 header {
   text-align: center;
   padding: 0 0 10rem 0;
   min-height: 100vh;
+  overflow: hidden; // prevent animation creating overscroll
   .container {
     h1 {
       text-indent: -10000px;
@@ -64,6 +65,7 @@ header {
 ol {
   list-style-type: none;
   section {
+    overflow: hidden; // prevent animation creating overscroll
     padding: 5rem 0 5rem 0;
     min-height: 100vh;
     h1 {
