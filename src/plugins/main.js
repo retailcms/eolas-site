@@ -79,31 +79,59 @@ $(function() {
             ease: Power2.easeOut
         });
     });
-    var svg = d3.select("svg.gradLine");
+    var svg = d3.select("svg");
     svg.append("linearGradient")
-        .attr("id", "gradient")
+        .attr("id", "gradient1")
         .attr("gradientUnits", "userSpaceOnUse")
         .attr("x1", 1.5).attr("y1", 1.5)
         .attr("x2", 1.5).attr("y2", 692.5)
         .selectAll("stop")
         .data([{
             offset: "0%",
-            color: "red"
-        }, {
-            offset: "40%",
-            color: "red"
-        }, {
-            offset: "40%",
-            color: "black"
-        }, {
-            offset: "62%",
-            color: "black"
-        }, {
-            offset: "62%",
-            color: "lawngreen"
+            color: "#FDEA14"
         }, {
             offset: "100%",
-            color: "lawngreen"
+            color: "#75b72c"
+        }])
+        .enter().append("stop")
+        .attr("offset", function(d) {
+            return d.offset;
+        })
+        .attr("stop-color", function(d) {
+            return d.color;
+        });
+    svg.append("linearGradient")
+        .attr("id", "gradient2")
+        .attr("gradientUnits", "userSpaceOnUse")
+        .attr("x1", 1.5).attr("y1", 1.5)
+        .attr("x2", 1.5).attr("y2", 692.5)
+        .selectAll("stop")
+        .data([{
+            offset: "0%",
+            color: "#75b72c"
+        }, {
+            offset: "100%",
+            color: "#0992d1"
+        }])
+        .enter().append("stop")
+        .attr("offset", function(d) {
+            return d.offset;
+        })
+        .attr("stop-color", function(d) {
+            return d.color;
+        });
+    svg.append("linearGradient")
+        .attr("id", "gradient3")
+        .attr("gradientUnits", "userSpaceOnUse")
+        .attr("x1", 1.5).attr("y1", 1.5)
+        .attr("x2", 1.5).attr("y2", 692.5)
+        .selectAll("stop")
+        .data([{
+            offset: "0%",
+            color: "#0992d1"
+        }, {
+            offset: "100%",
+            color: "rgba(0,0,0,0)"
         }])
         .enter().append("stop")
         .attr("offset", function(d) {
